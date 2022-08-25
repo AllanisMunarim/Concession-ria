@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fiap.PrimaryController">
+  <tabs>
+    <Tab text="Cadastro">
+         <content>
+            <GridPane onDragDetected="#salvar">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="224.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="316.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="213.0" minHeight="0.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="231.0" minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Marca" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="Modelo" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="Ano" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label text="Preço" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="Placa" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#salvar" text="Salvar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></Button>
+                  <TextField fx:id="textFieldMarca" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textFieldModelo" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textFieldAno" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textFieldPreco" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textFieldPlaca" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                     </GridPane.margin></TextField>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </GridPane>
+         </content></Tab>
+    <Tab text="Consulta">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <ToolBar prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <items>
+                      <Button fx:id="listView" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Listar Todos">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </top>
+            </BorderPane>
+         </content></Tab>
+  </tabs>
+</TabPane>
